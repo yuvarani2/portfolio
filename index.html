@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    <title>YuvaRani G portfolio</title>
+    <style>
+        body{
+            margin: 0px auto;
+            padding: 0%;
+            background-color: skyblue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #header {
+            height: 90px;
+            width: 100%;
+            background-color: darkblue;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header h1 {
+            font-size: 32px;
+            font-style:italic;
+        }
+
+        #header img{
+            width:100px;
+            height: 110px;
+            border-radius: 75%;
+            object-fit: cover;
+            position:absolute;
+            top: 10px;
+            left: 10%; 
+        }
+        nav
+        {
+            width:100%;
+            height: 25px;
+            margin: 0px auto;
+            background-color: orange;
+            padding-top: 8px;
+            padding-left: 5px;
+            display: block;
+
+        }
+        .nav-links{
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+            display: block;
+        }
+        .nav-links li{
+            float: left;
+            padding: 0px 20px;
+        }
+        .nav-links li a{
+            text-decoration: none;
+        }
+        .nav-links li a:hover{
+            color: #fff;
+            background: red;
+            display: block;
+            font-size: 20px;
+            border-radius: 20px 0px 20px 0px;
+        }
+        #home header
+        {
+             text-align: center;
+            display: block;
+            font-style:italic;
+            padding: 50px;
+        }
+        #about h2
+        {
+            text-align: center;
+            display: block;
+            font-style:italic;
+        }
+        .about-content
+        {
+            text-align: center;
+            font-size: medium;
+            font-style: oblique;
+            padding: 50px;
+        }
+        #education h2{
+            text-align: center;
+            display: block;
+            font-style:italic;
+        }
+        .education-content
+        {
+            text-align: center;
+            font-size: medium;
+            font-style: oblique;
+            list-style: none;
+            padding: 50px;
+        }
+        #skills h2{
+            text-align: center;
+            font-style:italic;
+            display: block;
+        }
+        .skills-list{
+            padding-right: 50px;
+            list-style: square;
+            font-style: oblique;
+            padding-block-start: 20px;
+        }
+        .skills-list li{
+            text-align: center;
+            font-style:italic;
+            list-style: none;
+        }
+       
+        #contact
+        {
+            -moz-box-align: center;
+            font-style:italic;
+            padding:50px;
+            background-color: skyblue;
+
+            display: block;
+        }
+        #contact h2
+        {
+            text-align: center;
+
+        }
+        #footer
+        {
+            width: 100%;
+            background: #007BFF;
+            margin: 0px auto;
+            text-align: center;
+            font-style:italic;
+            display: block;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1>YUVARANI G</h1>
+            <img src="Yuvarani G.jpeg">
+    </div></header>
+
+<nav>
+    <u1 class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </u1>
+
+</nav>
+<section id="home">
+    <header>
+        <h2>welcome to my portfolio!</h2>
+    </header>
+ </section>
+ <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <p>I am  a Computer Science student. I am very interested in this field so I choose this course.</br>I have completed some languages based upon this field.</p>
+    </div>
+</section>
+<section id="education">
+    <h2>Education</h2>
+    <ul class="education-content">
+        <li><b><i>ANNAMALAI UNIVERSITY</i></b></li>
+        <li><b><i>DHARMAPURAM ADHINAM ARTS COLLEGE</i></b></li>
+        <li><i>BSC-COMPUTER SCIENCE</i></li>
+        <li>2021-2024</li>
+    </ul>
+
+</section>
+<section id="skills">
+    <h2>skills</h2>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>PYTHON</li>
+        <li>DATABASE:MYSQL</li>
+        <li>JAVA</li>
+        <li>MS-OFFICE</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form name="form" method="post">
+        <table border="2" align="center">
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" name="txtName">
+                
+            </td></tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input tulpe="text" name="txtEmail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Message
+                </td>
+                <td>
+                    <input type="text" name="textMessage">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="btnSend Message" value="send message">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</section>
+<footer>
+    <div id="footer">
+        &copy; YUVARANI@2023.  All rights reserved.
+    </div>
+</footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    document.getElementById('contact-form').addEventListener('send message', function (e) {
+        e.preventDefault();
+    
+    const formData = new FormData(this);
+    console.log('Form data:', object.fromEntries(formData));
+
+    this.reset();
+    }); 
+    </script>
+    
+    
+    
+
+        </body></html>
